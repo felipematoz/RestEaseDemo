@@ -12,8 +12,10 @@ namespace RestEaseDemo
         {
             ISwapi apiClient = RestClient.For<ISwapi>("https://swapi.co/api/");
 
-            Planet planet = await apiClient.GetPlanet(1);
+            Planet planet = await apiClient.GetPlanetAsync(1);
             Console.WriteLine($"Planet: {planet.Name}, Population: {planet.Population}");
+
+
         }
     }
 }
